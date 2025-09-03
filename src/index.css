@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme (default) */
+:root {
+  --color-background-layout: #f2f2f2;
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --color-foreground-muted: #adadad;
+  --color-primary: #1e40af; /* xanh dương đậm */
+  --color-primary-muted: #d8dff8; /* xanh dương đậm */
+  --color-secondary: #f94735; /* sửa bỏ space */
+  --color-secondary-muted: #ffcac5; /* sửa bỏ space */
+  --color-accent: #10b981;
+  --color-surface: #f1f5f9;
+  --color-surface-muted: #dadada;
+  --color-card: #f8fafc;
+}
+
+/* Dark theme */
+.dark {
+  --color-background-layout: #182645; /* dark */
+  --color-background: #0f172a; /* dark */
+  --color-foreground: #e6eef8;
+  --color-foreground-muted: #989898;
+  --color-primary: #3b82f6;
+  --color-primary-muted: #649df8;
+  --color-secondary: #f87171;
+  --color-secondary-muted: #f68073;
+  --color-accent: #34d399;
+  --color-surface: #1a253d;
+  --color-surface-muted: #283552;
+  --color-card: #071029;
+}
+
+/* apply global */
+body {
+  background-color: var(--color-background-layout);
+  color: var(--color-foreground);
+}
+/* -----------------
+   Global base styles
+   ----------------- */
+@layer base {
+  html,
+  body {
+    @apply bg-background; /* background token */
+    color: var(--color-background-layout);
+  }
+
+  .text-foreground {
+    color: var(--color-foreground) !important;
+  }
+  .text-foreground-muted {
+    color: var(--color-foreground-muted) !important;
+  }
+  .text-link {
+    color: var(--color-link) !important;
+  }
+
+  /* Typography defaults */
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-foreground);
+  }
+  p,
+  li {
+    color: var(--color-foreground);
+  }
+  small,
+  .muted {
+    color: var(--color-foreground-muted);
+  }
+
+  /* Links */
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
