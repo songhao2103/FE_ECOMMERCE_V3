@@ -1,4 +1,7 @@
-import type { IFiltersGetProducts } from "../../https/apis/products/type";
+import type {
+  IFiltersGetProducts,
+  TFieldSortProductList,
+} from "../../https/apis/products/type";
 import type { IDeviceTypeItem } from "./type";
 
 export const DEVICE_TYPES: IDeviceTypeItem[] = [
@@ -32,4 +35,15 @@ export const INITIAL_FILTERS_GET_PRODUCT_LIST: IFiltersGetProducts = {
   pageIndex: 6,
   pageSize: 12,
   searchKey: "",
+  sortValue: 0,
+  sortField: "productName",
 };
+
+interface IFieldConfig {
+  value: TFieldSortProductList;
+  label: string;
+}
+export const FIELD_SORT_PRODUCTS_CONFIG: IFieldConfig[] = [
+  { value: "price", label: "Price" },
+  { value: "productName", label: "Product name" },
+];

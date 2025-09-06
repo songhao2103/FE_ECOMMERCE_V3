@@ -52,7 +52,7 @@ export const sizeMaps: Record<ButtonSize, IButtonSize> = {
   sm: {
     btn_h: 30,
     icon_size: 18,
-    btn_px: 10,
+    btn_px: 20,
   },
   md: {
     btn_h: 38,

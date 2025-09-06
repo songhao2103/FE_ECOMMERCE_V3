@@ -12,6 +12,7 @@ export const ROUTE_PATH = {
   CONTACT: "/lien-he",
   NEW_DETAIL: "/tin-tuc/:id",
   PRODUCTS: "/products",
+  PRODUCT_DETAIL: "/products/:id",
   LOG_IN: "/log-in",
   FIND_SOURCE_GOODS: PREFIX_ROUTE_PATH.SERVICES + "/tim-nguon-hang",
   OFFICIAL_TRANSPORTATION:

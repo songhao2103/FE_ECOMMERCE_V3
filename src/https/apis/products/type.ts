@@ -1,8 +1,12 @@
-import type { IBaseFilters } from "../../../interfaces/pagination";
+import type { IBaseFilters, ISortFilters } from "../../../interfaces/queries";
 
-export interface IFiltersGetProducts extends IBaseFilters {
-  deviceType?: number;
-  stores?: number;
+export type TFieldSortProductList = "productName" | "price";
+
+export interface IFiltersGetProducts
+  extends IBaseFilters,
+    ISortFilters<TFieldSortProductList> {
+  deviceTypes?: number[];
+  stores?: number[];
 }
 
 export interface IProductItemOnList {
@@ -16,4 +20,21 @@ export interface IProductItemOnList {
   imageDefault: string;
   images: string[];
   quantitySold: number;
+}
+
+export interface IImageOfProduct {
+  id: number;
+  colorName?: string;
+  colorCode?: string;
+  url: string;
+  quantity?: number;
+}
+
+export interface IProductDetail {
+  id: number;
+  productName: string;
+  description: string;
+  discount?: number;
+  price: number;
+  images: IImageOfProduct[];
 }

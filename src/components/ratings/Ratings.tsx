@@ -19,7 +19,7 @@ const Ratings: React.FC<IRatingsProps> = ({ rating }) => {
   return (
     <div className="flex items-center gap-1">
       {[0, 1, 2, 3, 4].map((_, index) => {
-        const StarIcon = renderStars(rating, index);
+        const StarIcon = renderStars(rating, index - 1);
         return <StarIcon key={index} className="text-yellow-400" size={18} />;
       })}
     </div>

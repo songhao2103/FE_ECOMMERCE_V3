@@ -105,7 +105,7 @@ const ButtonCustom: React.FC<IButtomCustomProps> = ({
 
       {label && (
         <Label
-          className={`text-sm font-medium`}
+          className={`text-sm font-normal`}
           $colorLabel={currentIconColor}
           style={sx?.label || {}}
         >

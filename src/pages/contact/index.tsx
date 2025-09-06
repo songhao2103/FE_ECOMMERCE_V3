@@ -2,12 +2,13 @@ import FormContact from "./components/FormContact";
 import LayoutContent from "../../layouts/LayoutContent";
 import Contactcontent from "./components/Contactcontent";
 import BackgroundLayoutSection from "../../layouts/BackgroundLayoutSection";
+import ProductDetail from "../product-detail";
 
 const Contact = () => {
   return (
     <LayoutContent>
       <BackgroundLayoutSection>
-        <div className="flex flex-col-reverse lg:flex-row gap-y-6 lg:gap-x-10 px-2 lg:px-6 xl:px-10">
+        <div className="flex flex-col-reverse px-2 lg:flex-row gap-y-6 lg:gap-x-10 lg:px-6 xl:px-10">
           <FormContact />
           <Contactcontent />
         </div>
@@ -21,6 +22,8 @@ const Contact = () => {
           height={"100%"}
         ></iframe>
       </div>
+
+      <ProductDetail />
     </LayoutContent>
   );
 };

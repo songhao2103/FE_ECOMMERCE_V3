@@ -35,6 +35,11 @@ export const publicRoutes: RouteConfig[] = [
     layout: MainLayout,
   },
   {
+    path: ROUTE_PATH.PRODUCT_DETAIL,
+    component: lazy(() => import("../pages/product-detail")),
+    layout: MainLayout,
+  },
+  {
     path: PREFIX_ROUTE_PATH.SERVICES + "/:slug",
     component: lazy(() => import("../pages/services")),
     layout: MainLayout,
